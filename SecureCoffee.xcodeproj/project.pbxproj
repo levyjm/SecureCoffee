@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F1B56E91E2480B000EC5DE0 /* SleepChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1B56E81E2480B000EC5DE0 /* SleepChecker.m */; };
 		6F8B9C8B1E245B8500D911BF /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8B9C8A1E245B8500D911BF /* MenuController.swift */; };
 		6F8B9C8D1E24628D00D911BF /* CheckVitals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8B9C8C1E24628D00D911BF /* CheckVitals.swift */; };
 		6F8B9C901E24655500D911BF /* BridgedMac.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F8B9C8F1E24655500D911BF /* BridgedMac.m */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6F1B56E81E2480B000EC5DE0 /* SleepChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SleepChecker.m; sourceTree = "<group>"; };
+		6F1B56EA1E24820600EC5DE0 /* SleepChecker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SleepChecker.h; sourceTree = "<group>"; };
 		6F8B9C8A1E245B8500D911BF /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		6F8B9C8C1E24628D00D911BF /* CheckVitals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckVitals.swift; sourceTree = "<group>"; };
 		6F8B9C8E1E24655500D911BF /* SecureCoffee-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SecureCoffee-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -107,6 +110,8 @@
 				6FF77A571E240C3F00EF92B2 /* MainMenu.xib */,
 				6F8B9C8C1E24628D00D911BF /* CheckVitals.swift */,
 				6F8B9C8F1E24655500D911BF /* BridgedMac.m */,
+				6F1B56E81E2480B000EC5DE0 /* SleepChecker.m */,
+				6F1B56EA1E24820600EC5DE0 /* SleepChecker.h */,
 				6F8B9C911E24673400D911BF /* BridgedMac.h */,
 				6FF77A5A1E240C3F00EF92B2 /* Info.plist */,
 				6F8B9C8E1E24655500D911BF /* SecureCoffee-Bridging-Header.h */,
@@ -269,6 +274,7 @@
 				6F8B9C8B1E245B8500D911BF /* MenuController.swift in Sources */,
 				6F8B9C901E24655500D911BF /* BridgedMac.m in Sources */,
 				6F8B9C8D1E24628D00D911BF /* CheckVitals.swift in Sources */,
+				6F1B56E91E2480B000EC5DE0 /* SleepChecker.m in Sources */,
 				6FF77A541E240C3F00EF92B2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

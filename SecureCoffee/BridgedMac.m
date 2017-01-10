@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <IOKit/ps/IOPowerSources.h>
+#import <IOKit/pwr_mgt/IOPMLib.h>
 #import "BridgedMac.h"
 
 @implementation BridgedMac
@@ -19,9 +20,9 @@
     } else if (timeRemaining == -1.0) {
         return @"Mac was recently unplugged";
     } else {
-        return @"Mac is and has been charging";
+        return @"Mac is not charging right now";
     }
-}
 
+}
 
 @end

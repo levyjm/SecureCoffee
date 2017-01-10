@@ -18,13 +18,13 @@ class MenuController: NSObject {
         statusItem.menu = statusMenu
     }
     
+    // create a CheckVitals Object
     let vitalChecker = CheckVitals()
     
     @IBAction func checkBattery(_ sender: Any) {
         vitalChecker.getStatus()
     }
     @IBAction func quitClicked(_ sender: Any) {
-        
         NSApplication.shared().terminate(self)
     }
 

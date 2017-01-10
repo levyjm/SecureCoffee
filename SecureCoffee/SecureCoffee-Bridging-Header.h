@@ -4,3 +4,4 @@
 
 
 #import "BridgedMac.h"
+#import "SleepChecker.h"

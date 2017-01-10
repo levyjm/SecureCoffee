@@ -10,9 +10,15 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
+    
+    let instanceOfSleepChecker: SleepChecker = SleepChecker()
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+        let backgroundQueue = DispatchQueue(label: "com.app.queue", qos: .background, target: nil)
+        backgroundQueue.async {
+            print("Run on background thread")
+            self.instanceOfSleepChecker.caller()
+        }
 
     }
 
