@@ -8,6 +8,13 @@
 
 #ifndef BridgedMac_h
 #define BridgedMac_h
+#import <Foundation/Foundation.h>
 
+@interface BridgedMac : NSObject
+@property (strong, nonatomic) id someProperty;
+
+- (NSString *) checkBattery;
+
+@end
 
 #endif /* BridgedMac_h */

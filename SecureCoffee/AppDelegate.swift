@@ -11,19 +11,13 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    @IBOutlet weak var statusMenu: NSMenu!
-    let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
-    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        statusItem.title = "Secure Coffee"
-        statusItem.menu = statusMenu
+        // Insert code here to initialize your application
+
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
-    }
-    @IBAction func quitClicked(_ sender: Any) {
-        NSApplication.shared().terminate(self)
     }
 }
 

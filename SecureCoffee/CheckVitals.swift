@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+class CheckVitals {
+    
+    func getStatus() -> Void {
+        let instanceOfBridgedMac: BridgedMac = BridgedMac()
+        print(instanceOfBridgedMac.checkBattery())
+    }
+    
+}
