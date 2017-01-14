@@ -22,6 +22,7 @@
 
 io_connect_t  root_port;
 
+
 @implementation SleepChecker
 
 - (NSString *) checkWoke {
@@ -39,9 +40,6 @@ io_connect_t  root_port;
     
     return @"Asleep";
 }
-
-
-//- (void) MySleepCallBack: (void *)refCon paramName2:(io_service_t)service paramName3:(natural_t)messageType paramName4:(void *)messageArgument
 
 void MySleepCallBack (void* refCon, io_service_t service, natural_t messageType, void *messageArgument)
 {
@@ -71,7 +69,7 @@ void MySleepCallBack (void* refCon, io_service_t service, natural_t messageType,
 }
 
 
-- (int) caller {
++ (int) caller {
     // notification port allocated by IORegisterForSystemPower
     IONotificationPortRef  notifyPortRef;
     
@@ -104,5 +102,5 @@ void MySleepCallBack (void* refCon, io_service_t service, natural_t messageType,
     return (0);
 }
 
-
 @end
+

@@ -14,10 +14,8 @@
 @interface SleepChecker : NSObject 
 @property (strong, nonatomic) id someProperty;
 
-//- (void) MySleepCallBack:(void *)refCon paramName2:(io_service_t)service paramName3:(natural_t)messageType paramName4:(void *)messageArgument;
-void MySleepCallBack (void* refCon, io_service_t service, natural_t messageType, void *messageArgument);
 - (NSString *) checkWoke;
-- (int) caller;
++ (int) caller;
 
 @end
 
