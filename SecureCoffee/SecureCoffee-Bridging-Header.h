@@ -5,3 +5,4 @@
 
 #import "BridgedMac.h"
 #import "SleepChecker.h"
+#import "LockScreen.h"

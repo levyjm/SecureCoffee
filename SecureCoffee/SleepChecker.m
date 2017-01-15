@@ -45,6 +45,8 @@ void MySleepCallBack (void* refCon, io_service_t service, natural_t messageType,
 {
     
     IOReturn ioReturn;
+    NSDictionary* errorDict;
+    NSAppleEventDescriptor* returnDescriptor = NULL;
     printf( "messageType %08lx, arg %08lx\n",
            (long unsigned int)messageType,
            (long unsigned int)messageArgument );
@@ -60,7 +62,19 @@ void MySleepCallBack (void* refCon, io_service_t service, natural_t messageType,
              kIOReturnSuccess, however the system WILL still go to sleep.
              */
             
+            
+            /* This is where you will alert a user that his or her computer is going to sleep */
             printf("Going to sleep...\n");
+            
+            NSAppleScript* scriptObject = [[NSAppleScript alloc] initWithSource:
+                                           @"\
+                                           tell application \"Messages\"\n\
+                                           set targetService to 1st service whose service type = iMessage\n\
+                                           set targetBuddy to buddy targetBuddyPhone of targetService\n\
+                                           send hello to 8042129310\n\
+                                           end tell"];
+            returnDescriptor = [scriptObject executeAndReturnError: &errorDict];
+            
             ioReturn = IOCancelPowerChange( root_port, (long)messageArgument );
             printf("%d", ioReturn);
             break;

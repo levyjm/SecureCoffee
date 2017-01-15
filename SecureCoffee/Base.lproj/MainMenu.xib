@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -21,6 +23,23 @@
         </customObject>
         <menu id="9nu-XX-d6X">
             <items>
+                <menuItem title="About SecureCoffee" id="01W-fp-W8g">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="kop-Va-06W"/>
+                <menuItem title="Preferences..." id="Hy9-RX-nKx">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="clickedPreferences:" target="KuU-gr-6Up" id="a45-yz-ZXG"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="xv6-Ht-Nwx"/>
+                <menuItem title="Lock Machine" id="pXH-w9-csg">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="lockComputer:" target="KuU-gr-6Up" id="baG-Me-3gt"/>
+                    </connections>
+                </menuItem>
                 <menuItem title="Check Battery" id="4ys-jW-DV1">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
@@ -34,7 +53,16 @@
                     </connections>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="194" y="33"/>
+            <point key="canvasLocation" x="-117" y="83"/>
         </menu>
+        <box boxType="custom" cornerRadius="4" title="Box" id="ZQq-x9-7hh">
+            <rect key="frame" x="0.0" y="0.0" width="177" height="114"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <view key="contentView" id="bpI-8v-56f">
+                <rect key="frame" x="1" y="1" width="175" height="112"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            </view>
+            <point key="canvasLocation" x="120" y="229"/>
+        </box>
     </objects>
 </document>
