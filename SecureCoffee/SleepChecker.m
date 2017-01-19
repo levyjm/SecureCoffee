@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "SleepChecker.h"
+#import "BridgedMac.h"
 
 #include <ctype.h>
 #include <stdlib.h>
@@ -21,7 +22,6 @@
 #include <IOKit/IOMessage.h>
 
 io_connect_t  root_port;
-
 
 @implementation SleepChecker
 
@@ -44,9 +44,9 @@ io_connect_t  root_port;
 void MySleepCallBack (void* refCon, io_service_t service, natural_t messageType, void *messageArgument)
 {
     
+    BridgedMac *instanceOfBridgedMac = [[BridgedMac alloc] init];
+    
     IOReturn ioReturn;
-    NSDictionary* errorDict;
-    NSAppleEventDescriptor* returnDescriptor = NULL;
     printf( "messageType %08lx, arg %08lx\n",
            (long unsigned int)messageType,
            (long unsigned int)messageArgument );
@@ -54,27 +54,8 @@ void MySleepCallBack (void* refCon, io_service_t service, natural_t messageType,
     switch ( messageType )
     {
         case kIOMessageSystemWillSleep:
-            /* The system WILL go to sleep. If you do not call IOAllowPowerChange or
-             IOCancelPowerChange to acknowledge this message, sleep will be
-             delayed by 30 seconds.
-             
-             NOTE: If you call IOCancelPowerChange to deny sleep it returns
-             kIOReturnSuccess, however the system WILL still go to sleep.
-             */
             
-            
-            /* This is where you will alert a user that his or her computer is going to sleep */
-            printf("Going to sleep...\n");
-            
-            NSAppleScript* scriptObject = [[NSAppleScript alloc] initWithSource:
-                                           @"\
-                                           tell application \"Messages\"\n\
-                                           set targetService to 1st service whose service type = iMessage\n\
-                                           set targetBuddy to buddy targetBuddyPhone of targetService\n\
-                                           send hello to 8042129310\n\
-                                           end tell"];
-            returnDescriptor = [scriptObject executeAndReturnError: &errorDict];
-            
+            [instanceOfBridgedMac sendSleepTextAlert];
             ioReturn = IOCancelPowerChange( root_port, (long)messageArgument );
             printf("%d", ioReturn);
             break;

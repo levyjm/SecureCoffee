@@ -3,8 +3,6 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
-        <capability name="box content view" minToolsVersion="7.0"/>
-        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -30,7 +28,7 @@
                 <menuItem title="Preferences..." id="Hy9-RX-nKx">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="clickedPreferences:" target="KuU-gr-6Up" id="a45-yz-ZXG"/>
+                        <action selector="clickPrefs:" target="KuU-gr-6Up" id="Uh7-yh-8RU"/>
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="xv6-Ht-Nwx"/>
@@ -53,16 +51,7 @@
                     </connections>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="-117" y="83"/>
+            <point key="canvasLocation" x="-285" y="143"/>
         </menu>
-        <box boxType="custom" cornerRadius="4" title="Box" id="ZQq-x9-7hh">
-            <rect key="frame" x="0.0" y="0.0" width="177" height="114"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-            <view key="contentView" id="bpI-8v-56f">
-                <rect key="frame" x="1" y="1" width="175" height="112"/>
-                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            </view>
-            <point key="canvasLocation" x="120" y="229"/>
-        </box>
     </objects>
 </document>

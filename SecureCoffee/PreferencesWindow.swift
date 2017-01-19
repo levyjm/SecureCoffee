@@ -9,11 +9,32 @@
 import Cocoa
 
 class PreferencesWindow: NSWindowController {
+    let instanceOfBridgedMac: BridgedMac = BridgedMac()
+    @IBOutlet weak var enterNumberLabel: NSTextField!
+    @IBOutlet weak var currentNumber: NSTextField!
 
-    override func windowDidLoad() {
-        super.windowDidLoad()
 
-        // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+    convenience init() {
+        self.init(windowNibName: "PreferencesWindow")
+        NSApp.activate(ignoringOtherApps: true)
     }
+    
+    override func windowDidLoad() {
+    }
+    
+    
+    @IBAction func setText(_ sender: Any) {
+        let desiredNumber = enterNumberLabel.stringValue as String
+        
+        let newNumber = String(desiredNumber.characters.filter { String($0).rangeOfCharacter(from: CharacterSet(charactersIn: "0123456789")) != nil })
+        
+        instanceOfBridgedMac.setNewNumber(newNumber)
+        currentNumber.stringValue = newNumber as String
+    }
+    
+    @IBAction func clickDone(_ sender: Any) {
+        self.close()
+    }
+    
     
 }

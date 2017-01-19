@@ -14,7 +14,10 @@
 @interface BridgedMac : NSObject
 @property (strong, nonatomic) id someProperty;
 
-- (NSString *) checkBattery;
+- (int) checkBattery;
+- (void) setNewNumber: (NSString*) number;
+- (void) sendBatteryTextAlert;
+- (void) sendSleepTextAlert;
 
 
 

@@ -7,12 +7,18 @@
 //
 
 import Foundation
+import Cocoa
 
-class CheckVitals {
+class CheckVitals: NSObject {
     
     func getStatus() -> Void {
         let instanceOfBridgedMac: BridgedMac = BridgedMac()
-        print(instanceOfBridgedMac.checkBattery())
+        
+        while (instanceOfBridgedMac.checkBattery() == -2) {
+            if (instanceOfBridgedMac.checkBattery() != -2) {
+                instanceOfBridgedMac.sendBatteryTextAlert()
+                break
+            }
+        }
     }
-    
 }

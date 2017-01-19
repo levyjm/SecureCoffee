@@ -13,31 +13,51 @@
 
 @implementation BridgedMac
 
-- (NSString *) checkBattery {
-    
-    NSString *sendTextString = [NSString stringWithFormat:@"\
-                                tell application \"Messages\"\n\
-                                set bounds of window 1 to {0, 0, 0, 0}\n\
-                                set targetBuddy to \"+18042129310\"\n\
-                                set targetService to id of 1st service whose service type = iMessage\n\
-                                set textMessage to \"Hi there!\"\n\
-                                set theBuddy to buddy targetBuddy of service id targetService\n\
-                                send textMessage to theBuddy\n\
-                                                     end tell"];
-    
-    NSAppleScript *textScript = [[NSAppleScript alloc] initWithSource:sendTextString];
-    
-    
+NSString *buddyNumber;
+
+- (int) checkBattery {
     
     CFTimeInterval timeRemaining = IOPSGetTimeRemainingEstimate();
     if (timeRemaining == -2.0) {
-        return @"Mac is plugged in";
+        //printf("Mac is plugged in");
+        return -2;
     } else if (timeRemaining == -1.0) {
-        return @"Mac was recently unplugged";
+        //printf("Mac was recently unplugged");
+        return -1;
     } else {
-        [textScript executeAndReturnError:nil];
-        return @"Mac is not charging right now";
+        //printf("Mac is not and has not been charging");
+        return 0;
     }
+}
+
+- (void) setNewNumber: (NSString*) number {
+    buddyNumber = number;
+}
+
+- (void) sendSleepTextAlert {
+    
+    NSString *sendTextString = [NSString stringWithFormat:@"\
+                                tell application \"Messages\"\n\
+                                set miniaturized of window 1 to true\n\
+                                send \"Your machine is going to sleep!\" to buddy \"%@\" of service \"SMS\"\n\
+                                set miniaturized of window 1 to true\n\
+                                end tell", buddyNumber];
+    
+    NSAppleScript *textScript = [[NSAppleScript alloc] initWithSource:sendTextString];
+    [textScript executeAndReturnError:nil];
+}
+
+- (void) sendBatteryTextAlert {
+    
+    NSString *sendTextString = [NSString stringWithFormat:@"\
+                                tell application \"Messages\"\n\
+                                set miniaturized of window 1 to true\n\
+                                send \"Your machine has been unplugged!\" to buddy \"%@\" of service \"SMS\"\n\
+                                set miniaturized of window 1 to true\n\
+                                end tell", buddyNumber];
+    
+    NSAppleScript *textScript = [[NSAppleScript alloc] initWithSource:sendTextString];
+    [textScript executeAndReturnError:nil];
 }
 
 @end
