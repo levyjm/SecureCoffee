@@ -16,6 +16,7 @@ class MenuController: NSObject, NSApplicationDelegate {
     @IBOutlet weak var window: NSWindow!
     
     let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
+    let instanceOfBridgedMac: BridgedMac = BridgedMac()
     let prefPane = PreferencesWindow()
     let vitalChecker = CheckVitals()
     
@@ -25,6 +26,7 @@ class MenuController: NSObject, NSApplicationDelegate {
         icon?.isTemplate = false // best for dark mode
         statusItem.image = icon
         
+        instanceOfBridgedMac.setNewNumber(defaults.object(forKey: "phoneNumber") as! String!)
         activeSelection.state =  defaults.integer(forKey: "isActive")
     }
     

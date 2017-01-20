@@ -31,7 +31,6 @@ class PreferencesWindow: NSWindowController {
         
         if (defaults.bool(forKey: "numberIsSet")) {
             currentNumber.stringValue = defaults.string(forKey: "phoneNumber")!
-            instanceOfBridgedMac.setNewNumber(defaults.object(forKey: "phoneNumber") as! String!)
             
         }
     }
