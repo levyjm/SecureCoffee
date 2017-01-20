@@ -20,6 +20,7 @@
 		6FF77A591E240C3F00EF92B2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FF77A571E240C3F00EF92B2 /* MainMenu.xib */; };
 		6FF77A641E240C3F00EF92B2 /* SecureCoffeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF77A631E240C3F00EF92B2 /* SecureCoffeeTests.swift */; };
 		6FF77A6F1E240C3F00EF92B2 /* SecureCoffeeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF77A6E1E240C3F00EF92B2 /* SecureCoffeeUITests.swift */; };
+		6FFD27521E32C06100196A6A /* SecureCoffee.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6FFD27511E32C06100196A6A /* SecureCoffee.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		6FF77A6A1E240C3F00EF92B2 /* SecureCoffeeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SecureCoffeeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FF77A6E1E240C3F00EF92B2 /* SecureCoffeeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureCoffeeUITests.swift; sourceTree = "<group>"; };
 		6FF77A701E240C3F00EF92B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FFD27511E32C06100196A6A /* SecureCoffee.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = SecureCoffee.icns; path = ../../../Desktop/SecureCoffee.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 		6FF77A521E240C3F00EF92B2 /* SecureCoffee */ = {
 			isa = PBXGroup;
 			children = (
+				6FFD27511E32C06100196A6A /* SecureCoffee.icns */,
 				6FF77A571E240C3F00EF92B2 /* MainMenu.xib */,
 				6FACF92E1E2BD0E80093A1E5 /* PreferencesWindow.xib */,
 				6FF77A531E240C3F00EF92B2 /* AppDelegate.swift */,
@@ -311,6 +314,7 @@
 				6FF77A561E240C3F00EF92B2 /* Assets.xcassets in Resources */,
 				6FACF9301E2BD0E80093A1E5 /* PreferencesWindow.xib in Resources */,
 				6FF77A591E240C3F00EF92B2 /* MainMenu.xib in Resources */,
+				6FFD27521E32C06100196A6A /* SecureCoffee.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
