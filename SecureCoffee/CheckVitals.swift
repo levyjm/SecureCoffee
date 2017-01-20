@@ -11,13 +11,24 @@ import Cocoa
 
 class CheckVitals: NSObject {
     
+     let instanceOfBridgedMac: BridgedMac = BridgedMac()
+    
     func getStatus() -> Void {
-        let instanceOfBridgedMac: BridgedMac = BridgedMac()
         
-        while (instanceOfBridgedMac.checkBattery() == -2) {
+        while (true) {
+            if (instanceOfBridgedMac.checkBattery() == -2) {
+                print("watching battery...")
+                watchBattery()
+            }
+        }
+    }
+    
+    func watchBattery() -> Void {
+        while (true) {
             if (instanceOfBridgedMac.checkBattery() != -2) {
+                print("sending text...")
                 instanceOfBridgedMac.sendBatteryTextAlert()
-                break
+                sleep(10)
             }
         }
     }

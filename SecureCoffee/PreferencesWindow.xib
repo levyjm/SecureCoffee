@@ -8,11 +8,13 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="PreferencesWindow" customModule="SecureCoffee" customModuleProvider="target">
             <connections>
+                <outlet property="checkBox" destination="bqk-48-8fV" id="GpN-8u-0fe"/>
                 <outlet property="currentNumber" destination="ItA-hi-kpd" id="5jZ-2P-8Ta"/>
                 <outlet property="currentNumberLabel" destination="ItA-hi-kpd" id="jQ3-aJ-9IX"/>
                 <outlet property="enterNumber" destination="HDK-Qo-nR0" id="0WZ-En-Gtn"/>
                 <outlet property="enterNumberLabel" destination="Ea0-fH-JFa" id="ra6-0c-Bwv"/>
                 <outlet property="numberTextField" destination="Ea0-fH-JFa" id="hy0-6X-ZYW"/>
+                <outlet property="phoneNumberLabel" destination="HDK-Qo-nR0" id="bmh-TT-W6U"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -23,7 +25,7 @@
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="353" height="157"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
-            <view key="contentView" wantsLayer="YES" id="se5-gp-TjO">
+            <view key="contentView" autoresizesSubviews="NO" wantsLayer="YES" id="se5-gp-TjO">
                 <rect key="frame" x="0.0" y="0.0" width="353" height="157"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
@@ -41,7 +43,7 @@
                         <constraints>
                             <constraint firstAttribute="width" constant="107" id="vwb-jS-aiz"/>
                         </constraints>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Fav-zx-gSt">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" drawsBackground="YES" id="Fav-zx-gSt">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -66,7 +68,7 @@
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="boolLogin:" target="-2" id="3x0-yn-P0F"/>
+                            <action selector="startAtLogin:" target="-2" id="dea-p8-cfT"/>
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dxq-UH-Nmb">
@@ -83,7 +85,7 @@
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ItA-hi-kpd">
                         <rect key="frame" x="174" y="89" width="75" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="currentNumberLabel" placeholderString="" id="R22-6j-orP">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="No Number Set" placeholderString="" id="R22-6j-orP">
                             <font key="font" metaFont="system" size="10"/>
                             <color key="textColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -94,7 +96,7 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
             </connections>
-            <point key="canvasLocation" x="211.5" y="180.5"/>
+            <point key="canvasLocation" x="32" y="167"/>
         </window>
     </objects>
 </document>

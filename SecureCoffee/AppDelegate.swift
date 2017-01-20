@@ -9,19 +9,14 @@
 import Cocoa
 import Foundation
 
+let defaults = UserDefaults.standard
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
-    let vitalChecker = CheckVitals()
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
-        let backgroundQueue = DispatchQueue(label: "com.app.queue", qos: .background, target: nil)
-            SleepChecker.caller()
-            backgroundQueue.async {
-            print("Run on background thread")
-            self.vitalChecker.getStatus()
-        }
+    
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

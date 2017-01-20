@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -16,6 +17,7 @@
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <customObject id="KuU-gr-6Up" customClass="MenuController" customModule="SecureCoffee" customModuleProvider="target">
             <connections>
+                <outlet property="activeSelection" destination="2bx-vC-HwH" id="fmN-qE-7i2"/>
                 <outlet property="statusMenu" destination="9nu-XX-d6X" id="wNI-l2-Mhb"/>
             </connections>
         </customObject>
@@ -23,6 +25,9 @@
             <items>
                 <menuItem title="About SecureCoffee" id="01W-fp-W8g">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="aboutSecureCoffee:" target="KuU-gr-6Up" id="yKC-GH-py7"/>
+                    </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="kop-Va-06W"/>
                 <menuItem title="Preferences..." id="Hy9-RX-nKx">
@@ -38,10 +43,10 @@
                         <action selector="lockComputer:" target="KuU-gr-6Up" id="baG-Me-3gt"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Check Battery" id="4ys-jW-DV1">
+                <menuItem title="Active" id="2bx-vC-HwH">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="checkBattery:" target="KuU-gr-6Up" id="g90-Po-Xwb"/>
+                        <action selector="activeCheck:" target="KuU-gr-6Up" id="Kod-w3-aPo"/>
                     </connections>
                 </menuItem>
                 <menuItem title="Quit" id="ZuC-nE-mgr">
@@ -51,7 +56,16 @@
                     </connections>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="-285" y="143"/>
+            <point key="canvasLocation" x="-285.5" y="152.5"/>
         </menu>
+        <button id="XUA-YP-VaP">
+            <rect key="frame" x="0.0" y="0.0" width="61" height="18"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <buttonCell key="cell" type="check" title="Check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="nQb-TW-ZoA">
+                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                <font key="font" metaFont="system"/>
+            </buttonCell>
+            <point key="canvasLocation" x="-232" y="253"/>
+        </button>
     </objects>
 </document>

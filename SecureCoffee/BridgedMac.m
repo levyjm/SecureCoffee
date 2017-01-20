@@ -36,6 +36,7 @@ NSString *buddyNumber;
 
 - (void) sendSleepTextAlert {
     
+    
     NSString *sendTextString = [NSString stringWithFormat:@"\
                                 tell application \"Messages\"\n\
                                 set miniaturized of window 1 to true\n\
