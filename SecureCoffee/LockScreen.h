@@ -15,6 +15,7 @@
 
 
 - (int) lockScreen;
+- (int) checkForLock;
 @end
 
 #endif /* LockScreen_h */

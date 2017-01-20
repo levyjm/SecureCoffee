@@ -8,6 +8,8 @@
 
 import Cocoa
 
+var loggedBackIn = 0;
+
 
 class MenuController: NSObject, NSApplicationDelegate {
     
@@ -69,6 +71,7 @@ class MenuController: NSObject, NSApplicationDelegate {
     /* lock computer when menu item is clicked */
     @IBAction func lockComputer(_ sender: Any) {
         LockScreen().lockScreen()
+        
         let backgroundQueue = DispatchQueue(label: "com.app.queue", qos: .background, target: nil)
         
         if (activeSelection.state == 1) {
@@ -78,6 +81,17 @@ class MenuController: NSObject, NSApplicationDelegate {
                 self.vitalChecker.getStatus()
             }
         }
+        
+        let endActivity = NSAlert()
+        endActivity.messageText = "Welcome back! Press OK to background SecureCoffee."
+        endActivity.addButton(withTitle: "OK")
+        endActivity.alertStyle = NSAlertStyle.warning
+        
+        if (endActivity.runModal() == NSAlertFirstButtonReturn) {
+            loggedBackIn = 1;
+        }
+        
+        
     }
     
     
