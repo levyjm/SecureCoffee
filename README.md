@@ -6,4 +6,4 @@ This menu bar app is for those who, like me, are paranoid leaving their laptops 
 
 ## Important
 * You should have Text Forwarding enabled as this will use SMS to push messages to your own number.
-  * I am not yet quite sure how to send an iMessage to yourself. 
+  * I am not yet quite sure how to send an iMessage to yourself, and not sure if it is even possible.
