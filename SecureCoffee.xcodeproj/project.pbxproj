@@ -10,6 +10,7 @@
 		6F0C45FF1E2AAE9100008ACE /* AppleScriptObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F0C45FE1E2AAE9100008ACE /* AppleScriptObjC.framework */; };
 		6F0C46141E2AD94100008ACE /* LockScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0C46131E2AD94100008ACE /* LockScreen.m */; };
 		6F1B56E91E2480B000EC5DE0 /* SleepChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1B56E81E2480B000EC5DE0 /* SleepChecker.m */; };
+		6F755E141E3547C300D4641C /* SecureCoffee.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6F755E131E3547C300D4641C /* SecureCoffee.icns */; };
 		6F8B9C8B1E245B8500D911BF /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8B9C8A1E245B8500D911BF /* MenuController.swift */; };
 		6F8B9C8D1E24628D00D911BF /* CheckVitals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8B9C8C1E24628D00D911BF /* CheckVitals.swift */; };
 		6F8B9C901E24655500D911BF /* BridgedMac.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F8B9C8F1E24655500D911BF /* BridgedMac.m */; };
@@ -20,7 +21,6 @@
 		6FF77A591E240C3F00EF92B2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FF77A571E240C3F00EF92B2 /* MainMenu.xib */; };
 		6FF77A641E240C3F00EF92B2 /* SecureCoffeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF77A631E240C3F00EF92B2 /* SecureCoffeeTests.swift */; };
 		6FF77A6F1E240C3F00EF92B2 /* SecureCoffeeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF77A6E1E240C3F00EF92B2 /* SecureCoffeeUITests.swift */; };
-		6FFD27521E32C06100196A6A /* SecureCoffee.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6FFD27511E32C06100196A6A /* SecureCoffee.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +47,7 @@
 		6F0C46151E2ADA2900008ACE /* LockScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LockScreen.h; sourceTree = "<group>"; };
 		6F1B56E81E2480B000EC5DE0 /* SleepChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SleepChecker.m; sourceTree = "<group>"; };
 		6F1B56EA1E24820600EC5DE0 /* SleepChecker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SleepChecker.h; sourceTree = "<group>"; };
+		6F755E131E3547C300D4641C /* SecureCoffee.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = SecureCoffee.icns; path = ../../../Desktop/SecureCoffee.icns; sourceTree = "<group>"; };
 		6F8B9C8A1E245B8500D911BF /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		6F8B9C8C1E24628D00D911BF /* CheckVitals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckVitals.swift; sourceTree = "<group>"; };
 		6F8B9C8E1E24655500D911BF /* SecureCoffee-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SecureCoffee-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -65,7 +66,6 @@
 		6FF77A6A1E240C3F00EF92B2 /* SecureCoffeeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SecureCoffeeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FF77A6E1E240C3F00EF92B2 /* SecureCoffeeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureCoffeeUITests.swift; sourceTree = "<group>"; };
 		6FF77A701E240C3F00EF92B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6FFD27511E32C06100196A6A /* SecureCoffee.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = SecureCoffee.icns; path = ../../../Desktop/SecureCoffee.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +134,7 @@
 		6FF77A521E240C3F00EF92B2 /* SecureCoffee */ = {
 			isa = PBXGroup;
 			children = (
-				6FFD27511E32C06100196A6A /* SecureCoffee.icns */,
+				6F755E131E3547C300D4641C /* SecureCoffee.icns */,
 				6FF77A571E240C3F00EF92B2 /* MainMenu.xib */,
 				6FACF92E1E2BD0E80093A1E5 /* PreferencesWindow.xib */,
 				6FF77A531E240C3F00EF92B2 /* AppDelegate.swift */,
@@ -311,10 +311,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F755E141E3547C300D4641C /* SecureCoffee.icns in Resources */,
 				6FF77A561E240C3F00EF92B2 /* Assets.xcassets in Resources */,
 				6FACF9301E2BD0E80093A1E5 /* PreferencesWindow.xib in Resources */,
 				6FF77A591E240C3F00EF92B2 /* MainMenu.xib in Resources */,
-				6FFD27521E32C06100196A6A /* SecureCoffee.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

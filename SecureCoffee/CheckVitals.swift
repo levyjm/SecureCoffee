@@ -30,13 +30,11 @@ class CheckVitals: NSObject {
     
     func watchBattery() -> Void {
         
-        while (x == 0) {
+        while (loggedBackIn == 0) {
             if (instanceOfBridgedMac.checkBattery() != -2) {
                 print("sending text...")
                 instanceOfBridgedMac.sendBatteryTextAlert()
                 sleep(10)
-            } else {
-                x = 1
             }
         }
     }

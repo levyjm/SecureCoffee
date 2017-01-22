@@ -91,6 +91,7 @@ class MenuController: NSObject, NSApplicationDelegate {
             loggedBackIn = 1;
         }
         
+        loggedBackIn = 0;
         
     }
     
