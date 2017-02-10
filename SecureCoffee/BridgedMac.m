@@ -19,13 +19,10 @@ NSString *buddyNumber;
     
     CFTimeInterval timeRemaining = IOPSGetTimeRemainingEstimate();
     if (timeRemaining == -2.0) {
-        //printf("Mac is plugged in");
         return -2;
     } else if (timeRemaining == -1.0) {
-        //printf("Mac was recently unplugged");
         return -1;
     } else {
-        //printf("Mac is not and has not been charging");
         return 0;
     }
 }

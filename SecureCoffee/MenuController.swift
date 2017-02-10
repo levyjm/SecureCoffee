@@ -72,12 +72,11 @@ class MenuController: NSObject, NSApplicationDelegate {
     @IBAction func lockComputer(_ sender: Any) {
         LockScreen().lockScreen()
         
-        let backgroundQueue = DispatchQueue(label: "com.app.queue", qos: .background, target: nil)
+        let backgroundQueue = DispatchQueue(label: "com.queue.Serial")
         
         if (activeSelection.state == 1) {
             SleepChecker.caller()
             backgroundQueue.async {
-                print("Running on background thread...")
                 self.vitalChecker.getStatus()
             }
         }
