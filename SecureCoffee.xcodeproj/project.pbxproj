@@ -134,22 +134,22 @@
 		6FF77A521E240C3F00EF92B2 /* SecureCoffee */ = {
 			isa = PBXGroup;
 			children = (
+				6FF77A551E240C3F00EF92B2 /* Assets.xcassets */,
 				6F755E131E3547C300D4641C /* SecureCoffee.icns */,
 				6FF77A571E240C3F00EF92B2 /* MainMenu.xib */,
 				6FACF92E1E2BD0E80093A1E5 /* PreferencesWindow.xib */,
 				6FF77A531E240C3F00EF92B2 /* AppDelegate.swift */,
+				6F8B9C8C1E24628D00D911BF /* CheckVitals.swift */,
 				6F8B9C8A1E245B8500D911BF /* MenuController.swift */,
-				6FF77A551E240C3F00EF92B2 /* Assets.xcassets */,
 				6FACF92D1E2BD0E80093A1E5 /* PreferencesWindow.swift */,
 				6F0C46131E2AD94100008ACE /* LockScreen.m */,
 				6F0C46151E2ADA2900008ACE /* LockScreen.h */,
-				6F8B9C8C1E24628D00D911BF /* CheckVitals.swift */,
-				6F8B9C8F1E24655500D911BF /* BridgedMac.m */,
 				6F1B56E81E2480B000EC5DE0 /* SleepChecker.m */,
 				6F1B56EA1E24820600EC5DE0 /* SleepChecker.h */,
+				6F8B9C8F1E24655500D911BF /* BridgedMac.m */,
 				6F8B9C911E24673400D911BF /* BridgedMac.h */,
-				6FF77A5A1E240C3F00EF92B2 /* Info.plist */,
 				6F8B9C8E1E24655500D911BF /* SecureCoffee-Bridging-Header.h */,
+				6FF77A5A1E240C3F00EF92B2 /* Info.plist */,
 			);
 			path = SecureCoffee;
 			sourceTree = "<group>";

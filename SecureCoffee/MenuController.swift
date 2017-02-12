@@ -10,7 +10,6 @@ import Cocoa
 
 var loggedBackIn = 0;
 
-
 class MenuController: NSObject, NSApplicationDelegate {
     
     @IBOutlet weak var activeSelection: NSMenuItem!
@@ -81,17 +80,19 @@ class MenuController: NSObject, NSApplicationDelegate {
             }
         }
         
-        let endActivity = NSAlert()
-        endActivity.messageText = "Welcome back! Press OK to background SecureCoffee."
-        endActivity.addButton(withTitle: "OK")
-        endActivity.alertStyle = NSAlertStyle.warning
         
-        if (endActivity.runModal() == NSAlertFirstButtonReturn) {
-            loggedBackIn = 1;
+        if (activeSelection.state == 1) {
+            let endActivity = NSAlert()
+            endActivity.messageText = "Welcome back! Press OK to background SecureCoffee."
+            endActivity.addButton(withTitle: "OK")
+            endActivity.alertStyle = NSAlertStyle.warning
+            
+            if (endActivity.runModal() == NSAlertFirstButtonReturn) {
+                loggedBackIn = 1;
+            }
         }
         
         loggedBackIn = 0;
-        
     }
     
     

@@ -16,11 +16,9 @@ class CheckVitals: NSObject {
     var x = 0
     var y = 0
     
-    
     func getStatus() -> Void {
         
-        while (loggedBackIn == 0) {
-            usleep(100000)
+        if (loggedBackIn == 0) {
             if (instanceOfBridgedMac.checkBattery() == -2 && y == 0) {
                 watchBattery()
                 y = 1
@@ -31,6 +29,7 @@ class CheckVitals: NSObject {
     func watchBattery() -> Void {
         
         while (loggedBackIn == 0) {
+            usleep(100000)
             if (instanceOfBridgedMac.checkBattery() != -2) {
                 instanceOfBridgedMac.sendBatteryTextAlert()
                 sleep(10)

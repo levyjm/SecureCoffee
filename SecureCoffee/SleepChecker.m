@@ -34,7 +34,6 @@ io_connect_t  root_port;
     
     if (success == kIOReturnSuccess)
     {
-        printf("%s", "Computer is going to sleep now!\n");
         success = IOPMAssertionRelease(assertionID);
     }
     

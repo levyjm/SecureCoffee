@@ -10,6 +10,7 @@
 #define BridgedMac_h
 #import <Foundation/Foundation.h>
 #import <IOKit/pwr_mgt/IOPMLib.h>
+#import <IOKit/PS/IOPowerSources.h>
 
 @interface BridgedMac : NSObject
 @property (strong, nonatomic) id someProperty;
@@ -18,8 +19,7 @@
 - (void) setNewNumber: (NSString*) number;
 - (void) sendBatteryTextAlert;
 - (void) sendSleepTextAlert;
-
-
+- (void) watchForStateChange;
 
 @end
 
