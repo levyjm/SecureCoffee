@@ -6,21 +6,18 @@
 //  Copyright © 2017 john. All rights reserved.
 //
 
-#ifndef BridgedMac_h
-#define BridgedMac_h
+#ifndef SendText_h
+#define SendText_h
 #import <Foundation/Foundation.h>
-#import <IOKit/pwr_mgt/IOPMLib.h>
-#import <IOKit/PS/IOPowerSources.h>
 
-@interface BridgedMac : NSObject
+@interface SendText : NSObject
 @property (strong, nonatomic) id someProperty;
 
-- (int) checkBattery;
 - (void) setNewNumber: (NSString*) number;
 - (void) sendBatteryTextAlert;
 - (void) sendSleepTextAlert;
-- (void) watchForStateChange;
+- (void) sendMovementTextAlert;
 
 @end
 
-#endif /* BridgedMac_h */
+#endif /* SendText_h */

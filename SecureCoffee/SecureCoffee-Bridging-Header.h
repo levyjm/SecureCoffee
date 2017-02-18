@@ -3,6 +3,8 @@
 //
 
 
-#import "BridgedMac.h"
+#import "SendText.h"
 #import "SleepChecker.h"
 #import "LockScreen.h"
+#import "CheckSMS.h"
+#import "CheckPowerSource.h"

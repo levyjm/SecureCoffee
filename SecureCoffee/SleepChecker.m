@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "SleepChecker.h"
-#import "BridgedMac.h"
+#import "SendText.h"
 
 #include <ctype.h>
 #include <stdlib.h>
@@ -43,7 +43,7 @@ io_connect_t  root_port;
 void MySleepCallBack (void* refCon, io_service_t service, natural_t messageType, void *messageArgument)
 {
     
-    BridgedMac *instanceOfBridgedMac = [[BridgedMac alloc] init];
+    SendText *instanceOfSendText = [[SendText alloc] init];
     
     IOReturn ioReturn;
     printf( "messageType %08lx, arg %08lx\n",
@@ -54,7 +54,7 @@ void MySleepCallBack (void* refCon, io_service_t service, natural_t messageType,
     {
         case kIOMessageSystemWillSleep:
             
-            [instanceOfBridgedMac sendSleepTextAlert];
+            [instanceOfSendText sendSleepTextAlert];
             ioReturn = IOCancelPowerChange( root_port, (long)messageArgument );
             printf("%d", ioReturn);
             break;

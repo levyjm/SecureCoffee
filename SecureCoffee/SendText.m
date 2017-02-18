@@ -1,5 +1,5 @@
 //
-//  BridgedMac.m
+//  SendText.m
 //  SecureCoffee
 //
 //  Created by John on 1/9/17.
@@ -7,25 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <IOKit/ps/IOPowerSources.h>
-#import <IOKit/pwr_mgt/IOPMLib.h>
-#import "BridgedMac.h"
+#import "SendText.h"
 
-@implementation BridgedMac
+@implementation SendText
 
 NSString *buddyNumber;
-
-- (int) checkBattery {
-    
-    CFTimeInterval timeRemaining = IOPSGetTimeRemainingEstimate();
-    if (timeRemaining == -2.0) {
-        return -2;
-    } else if (timeRemaining == -1.0) {
-        return -1;
-    } else {
-        return 0;
-    }
-}
 
 - (void) setNewNumber: (NSString*) number {
     buddyNumber = number;
@@ -51,6 +37,20 @@ NSString *buddyNumber;
                                 tell application \"Messages\"\n\
                                 set miniaturized of window 1 to true\n\
                                 send \"Your machine has been unplugged!\" to buddy \"%@\" of service \"SMS\"\n\
+                                set miniaturized of window 1 to true\n\
+                                end tell", buddyNumber];
+    
+    NSAppleScript *textScript = [[NSAppleScript alloc] initWithSource:sendTextString];
+    [textScript executeAndReturnError:nil];
+}
+
+- (void) sendMovementTextAlert {
+    
+    
+    NSString *sendTextString = [NSString stringWithFormat:@"\
+                                tell application \"Messages\"\n\
+                                set miniaturized of window 1 to true\n\
+                                send \"Your machine is moving!\" to buddy \"%@\" of service \"SMS\"\n\
                                 set miniaturized of window 1 to true\n\
                                 end tell", buddyNumber];
     

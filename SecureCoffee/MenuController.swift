@@ -17,7 +17,7 @@ class MenuController: NSObject, NSApplicationDelegate {
     @IBOutlet weak var window: NSWindow!
     
     let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
-    let instanceOfBridgedMac: BridgedMac = BridgedMac()
+    let instanceOfSendText: SendText = SendText()
     let prefPane = PreferencesWindow()
     let vitalChecker = CheckVitals()
     
@@ -27,7 +27,7 @@ class MenuController: NSObject, NSApplicationDelegate {
         icon?.isTemplate = false // best for dark mode
         statusItem.image = icon
         
-        instanceOfBridgedMac.setNewNumber(defaults.object(forKey: "phoneNumber") as! String!)
+        instanceOfSendText.setNewNumber(defaults.object(forKey: "phoneNumber") as! String!)
         activeSelection.state =  defaults.integer(forKey: "isActive")
     }
     
@@ -57,6 +57,7 @@ class MenuController: NSObject, NSApplicationDelegate {
     /* show prefs window if clicked */
     @IBAction func clickPrefs(_ sender: Any) {
         prefPane.showWindow(nil)
+        
     }
 
     @IBAction func aboutSecureCoffee(_ sender: Any) {
@@ -69,13 +70,20 @@ class MenuController: NSObject, NSApplicationDelegate {
     
     /* lock computer when menu item is clicked */
     @IBAction func lockComputer(_ sender: Any) {
+         loggedBackIn = 0;
         LockScreen().lockScreen()
         
-        let backgroundQueue = DispatchQueue(label: "com.queue.Serial")
+        let backgroundThreadUno = DispatchQueue.global()
+        let backgroundThreadDos = DispatchQueue.global()
+
         
         if (activeSelection.state == 1) {
             SleepChecker.caller()
-            backgroundQueue.async {
+            
+            backgroundThreadUno.async {
+                self.vitalChecker.watchMovement()
+            }
+            backgroundThreadDos.async {
                 self.vitalChecker.getStatus()
             }
         }
@@ -91,8 +99,6 @@ class MenuController: NSObject, NSApplicationDelegate {
                 loggedBackIn = 1;
             }
         }
-        
-        loggedBackIn = 0;
     }
     
     

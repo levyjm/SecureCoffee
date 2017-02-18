@@ -9,13 +9,13 @@
 #ifndef LockScreen_h
 #define LockScreen_h
 
-
 @interface LockScreen : NSObject
 @property (strong, nonatomic) id someProperty;
 
 
 - (int) lockScreen;
 - (int) checkForLock;
+
 @end
 
 #endif /* LockScreen_h */

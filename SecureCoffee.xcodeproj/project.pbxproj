@@ -10,12 +10,15 @@
 		6F0C45FF1E2AAE9100008ACE /* AppleScriptObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F0C45FE1E2AAE9100008ACE /* AppleScriptObjC.framework */; };
 		6F0C46141E2AD94100008ACE /* LockScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0C46131E2AD94100008ACE /* LockScreen.m */; };
 		6F1B56E91E2480B000EC5DE0 /* SleepChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1B56E81E2480B000EC5DE0 /* SleepChecker.m */; };
+		6F3503C21E55471500363C94 /* CheckSMS.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3503C11E55471500363C94 /* CheckSMS.m */; };
 		6F755E141E3547C300D4641C /* SecureCoffee.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6F755E131E3547C300D4641C /* SecureCoffee.icns */; };
 		6F8B9C8B1E245B8500D911BF /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8B9C8A1E245B8500D911BF /* MenuController.swift */; };
 		6F8B9C8D1E24628D00D911BF /* CheckVitals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8B9C8C1E24628D00D911BF /* CheckVitals.swift */; };
-		6F8B9C901E24655500D911BF /* BridgedMac.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F8B9C8F1E24655500D911BF /* BridgedMac.m */; };
 		6FACF92F1E2BD0E80093A1E5 /* PreferencesWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FACF92D1E2BD0E80093A1E5 /* PreferencesWindow.swift */; };
 		6FACF9301E2BD0E80093A1E5 /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FACF92E1E2BD0E80093A1E5 /* PreferencesWindow.xib */; };
+		6FECC56E1E5884E700811A3F /* SendText.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FECC56D1E5884E700811A3F /* SendText.m */; };
+		6FECC5761E58878D00811A3F /* CheckPowerSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FECC5751E58878D00811A3F /* CheckPowerSource.m */; };
+		6FECC5831E588E0D00811A3F /* smslib.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FECC5821E588E0D00811A3F /* smslib.m */; };
 		6FF77A541E240C3F00EF92B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF77A531E240C3F00EF92B2 /* AppDelegate.swift */; };
 		6FF77A561E240C3F00EF92B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FF77A551E240C3F00EF92B2 /* Assets.xcassets */; };
 		6FF77A591E240C3F00EF92B2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FF77A571E240C3F00EF92B2 /* MainMenu.xib */; };
@@ -47,14 +50,20 @@
 		6F0C46151E2ADA2900008ACE /* LockScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LockScreen.h; sourceTree = "<group>"; };
 		6F1B56E81E2480B000EC5DE0 /* SleepChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SleepChecker.m; sourceTree = "<group>"; };
 		6F1B56EA1E24820600EC5DE0 /* SleepChecker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SleepChecker.h; sourceTree = "<group>"; };
+		6F3503C11E55471500363C94 /* CheckSMS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckSMS.m; sourceTree = "<group>"; };
+		6F3503C31E55472E00363C94 /* CheckSMS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckSMS.h; sourceTree = "<group>"; };
 		6F755E131E3547C300D4641C /* SecureCoffee.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = SecureCoffee.icns; path = ../../../Desktop/SecureCoffee.icns; sourceTree = "<group>"; };
 		6F8B9C8A1E245B8500D911BF /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		6F8B9C8C1E24628D00D911BF /* CheckVitals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckVitals.swift; sourceTree = "<group>"; };
 		6F8B9C8E1E24655500D911BF /* SecureCoffee-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SecureCoffee-Bridging-Header.h"; sourceTree = "<group>"; };
-		6F8B9C8F1E24655500D911BF /* BridgedMac.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BridgedMac.m; sourceTree = "<group>"; };
-		6F8B9C911E24673400D911BF /* BridgedMac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgedMac.h; sourceTree = "<group>"; };
+		6F8B9C911E24673400D911BF /* SendText.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SendText.h; sourceTree = "<group>"; };
 		6FACF92D1E2BD0E80093A1E5 /* PreferencesWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesWindow.swift; sourceTree = "<group>"; };
 		6FACF92E1E2BD0E80093A1E5 /* PreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesWindow.xib; sourceTree = "<group>"; };
+		6FECC56D1E5884E700811A3F /* SendText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendText.m; sourceTree = "<group>"; };
+		6FECC5751E58878D00811A3F /* CheckPowerSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckPowerSource.m; sourceTree = "<group>"; };
+		6FECC5771E5887B000811A3F /* CheckPowerSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckPowerSource.h; sourceTree = "<group>"; };
+		6FECC5811E588E0D00811A3F /* smslib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = smslib.h; path = SMSLib/smslib.h; sourceTree = "<group>"; };
+		6FECC5821E588E0D00811A3F /* smslib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = smslib.m; path = SMSLib/smslib.m; sourceTree = "<group>"; };
 		6FF77A501E240C3F00EF92B2 /* SecureCoffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecureCoffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FF77A531E240C3F00EF92B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FF77A551E240C3F00EF92B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -135,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				6FF77A551E240C3F00EF92B2 /* Assets.xcassets */,
+				6FF77A5A1E240C3F00EF92B2 /* Info.plist */,
 				6F755E131E3547C300D4641C /* SecureCoffee.icns */,
 				6FF77A571E240C3F00EF92B2 /* MainMenu.xib */,
 				6FACF92E1E2BD0E80093A1E5 /* PreferencesWindow.xib */,
@@ -142,14 +152,19 @@
 				6F8B9C8C1E24628D00D911BF /* CheckVitals.swift */,
 				6F8B9C8A1E245B8500D911BF /* MenuController.swift */,
 				6FACF92D1E2BD0E80093A1E5 /* PreferencesWindow.swift */,
+				6FECC5751E58878D00811A3F /* CheckPowerSource.m */,
+				6FECC5771E5887B000811A3F /* CheckPowerSource.h */,
+				6F3503C11E55471500363C94 /* CheckSMS.m */,
+				6F3503C31E55472E00363C94 /* CheckSMS.h */,
 				6F0C46131E2AD94100008ACE /* LockScreen.m */,
 				6F0C46151E2ADA2900008ACE /* LockScreen.h */,
+				6FECC56D1E5884E700811A3F /* SendText.m */,
+				6F8B9C911E24673400D911BF /* SendText.h */,
 				6F1B56E81E2480B000EC5DE0 /* SleepChecker.m */,
 				6F1B56EA1E24820600EC5DE0 /* SleepChecker.h */,
-				6F8B9C8F1E24655500D911BF /* BridgedMac.m */,
-				6F8B9C911E24673400D911BF /* BridgedMac.h */,
 				6F8B9C8E1E24655500D911BF /* SecureCoffee-Bridging-Header.h */,
-				6FF77A5A1E240C3F00EF92B2 /* Info.plist */,
+				6FECC5811E588E0D00811A3F /* smslib.h */,
+				6FECC5821E588E0D00811A3F /* smslib.m */,
 			);
 			path = SecureCoffee;
 			sourceTree = "<group>";
@@ -347,12 +362,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F8B9C8B1E245B8500D911BF /* MenuController.swift in Sources */,
-				6F8B9C901E24655500D911BF /* BridgedMac.m in Sources */,
+				6FECC56E1E5884E700811A3F /* SendText.m in Sources */,
+				6FECC5831E588E0D00811A3F /* smslib.m in Sources */,
 				6F8B9C8D1E24628D00D911BF /* CheckVitals.swift in Sources */,
 				6F1B56E91E2480B000EC5DE0 /* SleepChecker.m in Sources */,
+				6F3503C21E55471500363C94 /* CheckSMS.m in Sources */,
 				6F0C46141E2AD94100008ACE /* LockScreen.m in Sources */,
 				6FACF92F1E2BD0E80093A1E5 /* PreferencesWindow.swift in Sources */,
 				6FF77A541E240C3F00EF92B2 /* AppDelegate.swift in Sources */,
+				6FECC5761E58878D00811A3F /* CheckPowerSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

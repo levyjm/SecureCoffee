@@ -16,7 +16,7 @@ class PreferencesWindow: NSWindowController {
     @IBOutlet weak var enterNumberLabel: NSTextField!
     @IBOutlet weak var currentNumber: NSTextField!
     
-    let instanceOfBridgedMac: BridgedMac = BridgedMac()
+    let instanceOfSendText: SendText = SendText()
     let defaults = UserDefaults.standard
 
     convenience init() {
@@ -26,7 +26,6 @@ class PreferencesWindow: NSWindowController {
     override func windowDidLoad() {
         self.window?.center()
         self.window?.makeKeyAndOrderFront(nil)
-        self.window?.styleMask.remove(NSWindowStyleMask.resizable)
         NSApp.activate(ignoringOtherApps: true)
         
         if (defaults.bool(forKey: "numberIsSet")) {
@@ -56,7 +55,7 @@ class PreferencesWindow: NSWindowController {
         defaults.setValue(newNumber, forKey: "phoneNumber")
         defaults.set(true, forKey: "numberIsSet")
         
-        instanceOfBridgedMac.setNewNumber(defaults.object(forKey: "phoneNumber") as! String!)
+        instanceOfSendText.setNewNumber(defaults.object(forKey: "phoneNumber") as! String!)
         currentNumber.stringValue = defaults.string(forKey: "phoneNumber")!
         enterNumberLabel.stringValue = ""
     }

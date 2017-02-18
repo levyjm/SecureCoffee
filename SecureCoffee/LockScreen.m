@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "LockScreen.h"//>
+#import "LockScreen.h"
 
 
 @implementation LockScreen
@@ -24,15 +24,12 @@ int locked;
     [task setLaunchPath: @"/System/Library/CoreServices/Menu Extras/User.menu/Contents/Resources/CGSession"];
     [task launch];
     NSLog(@"screen is Locked");
-
     
     return 0;
 }
 
 
 - (int) checkForLock {
-    
-    
     
     return locked;
     
